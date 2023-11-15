@@ -1,9 +1,11 @@
 #include "main.h"
 
-/*print_int() prints integer
+/**
+ * print_int- prints integer
  * @len:va_list of argumentsfrom _printf()
  * @f:pointer to the struct flags
  * if a flag is passed to printf
+ * Return:counter value
  */
 
 int print_int(va_list len, flags_s *f)
@@ -11,7 +13,7 @@ int print_int(va_list len, flags_s *f)
 	int n = va_arg(len, int);
 	int res = digit_counter(n);
 
-	if (f ->space == 1 && f->plus == 0 && n >= 0)
+	if (f->space == 1 && f->plus == 0 && n >= 0)
 		res += _putchar(' ');
 	if (f->plus == 1 && n >= 0)
 		res += _putchar('+');
@@ -22,9 +24,9 @@ int print_int(va_list len, flags_s *f)
 }
 
 /**
- * digit counter() returns number of dgits for _printf()
+ * digit_counter- returns number of dgits for _printf()
  * @i: integer iteration
- * return number of dgits
+ * Return: number of dgits
  */
 
 int digit_counter(int i)
@@ -33,10 +35,10 @@ int digit_counter(int i)
 	unsigned int u;
 
 	if (i < 0)
-		u = 1* -1;
+		u = 1 * -1;
 	else
-		u=1;
-	while (u !=0)
+		u = 1;
+	while (u != 0)
 	{
 		u /= 10;
 		d++;
@@ -45,29 +47,31 @@ int digit_counter(int i)
 }
 
 /**
- * print_numb() helper func that loops through and prints all its digits
- * @n : integer to be printed
+ * print_numb-helper func that loops through and prints all its digits
+ * @n: integer to be printed
+ * Return:nothing
  */
 
-void print_numb(int n )
+void print_numb(int n)
 {
 	unsigned int n1;
+
 	if (n < 0)
 	{
 		_putchar('-');
 		n1 = -n;
 	}
 	else
-		n1 =n;
-	if (n1 /10)
-		print_numb(n1 /10);
+		n1 = n;
+	if (n1 / 10)
+		print_numb(n1 / 10);
 	_putchar((n1 % 10) + '0');
 }
 
 /**
- * print_unsigned() - prints postive integers 
+ * print_unsigned- prints postive integers
  * @len:va_list of args from _Printf
- * return number of char printed
+ * Return: number of char printed
  * @f: pointer to struct flags
  */
 

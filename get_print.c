@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * get_print- prints string
+ * @s: contains strings
+ * Return: returns value on success
+ */
 
 int (*get_print(char s))(va_list, flags_s *)
 {
@@ -22,8 +27,9 @@ int (*get_print(char s))(va_list, flags_s *)
 	int totalflags = 14;
 
 	register int i;
-	for (i =0; i< totalflags; i++)
+
+	for (i = 0; i < totalflags; i++)
 		if (func_arr[i].c == s)
 			return (func_arr[i].f);
-	return(NULL);
+	return (NULL);
 }
