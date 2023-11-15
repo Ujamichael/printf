@@ -11,9 +11,9 @@
 /**
  * struct flags - struct containing flags to switch on
  * when flag specifier is passed to _printf()
- * @plus
- * @space
- * @hash
+ * @plus:flag plus
+ * @space:flag space
+ * @hash:flag hash
  */
 typedef struct flags
 {
@@ -23,7 +23,7 @@ typedef struct flags
 } flags_s;
 
 /**
- * struct to handle print
+ * struct handleprint- choose right function
  * depending on the format specifier passed to _printf()
  * @c:format specifier
  * @f:pointer to the correct printing function
@@ -32,7 +32,7 @@ typedef struct handleprint
 {
 	char c;
 	int (*f)(va_list ag, flags_s *f);
-}hp;
+} hp;
 
 /*print_number */
 int print_int(va_list len, flags_s *f);
@@ -43,7 +43,7 @@ int digit_counter(int i);
 /*print_bases*/
 int print_hex(va_list len, flags_s *f);
 int print_hex_lg(va_list len, flags_s *f);
-int print_binary(va_list len, flags_s f*);
+int print_binary(va_list len, flags_s *f);
 int print_octal(va_list len, flags_s *f);
 
 /*converter*/
