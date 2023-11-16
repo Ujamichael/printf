@@ -15,7 +15,7 @@ int print_hex(va_list len, flags_s *f)
 
 	if (f->hash == 1 && str[0] != '0')
 		counter += _puts("0x");
-	counter += _Puts(str);
+	counter += _puts(str);
 	return (counter);
 }
 

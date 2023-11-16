@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_string- loops through a string and prints every char
+ * print_strings- loops through a string and prints every char
  * @len: va_list args from ptintf
  * @f: pointer to struct flags
  * Return: numb of char printed
  */
 
-int print_string(va_list len, flags_s *f)
+int print_strings(va_list len, flags_s *f)
 {
 	char *s = va_arg(len, char *);
 

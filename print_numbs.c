@@ -19,7 +19,7 @@ int print_int(va_list len, flags_s *f)
 		res += _putchar('+');
 	if (n <= 0)
 		res++;
-	print_number(n);
+	print_numb(n);
 	return (res);
 }
 

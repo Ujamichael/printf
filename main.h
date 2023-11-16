@@ -69,7 +69,7 @@ int _puts(char *str);
 /*print_custom */
 int print_rot13(va_list len, flags_s *f);
 int print_rev(va_list len, flags_s *f);
-int print_bigs(va_list len, flags_s *f);
+int print_bigS(va_list len, flags_s *f);
 
 
 /*print_address*/
