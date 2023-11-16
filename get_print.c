@@ -10,13 +10,13 @@ int (*get_print(char s))(va_list, flags_s *)
 {
 	hp func_arr[] = {
 		{'i', print_int},
-		{'c', print_char},
 		{'s', print_strings},
+		{'c', print_char},
 		{'d', print_int},
 		{'u', print_unsigned},
-		{'b', print_binary},
 		{'x', print_hex},
 		{'X', print_hex_lg},
+		{'b', print_binary},
 		{'o', print_octal},
 		{'R', print_rot13},
 		{'r', print_rev},
