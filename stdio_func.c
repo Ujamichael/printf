@@ -19,7 +19,7 @@ int _putchar(char c)
 	if (c != -1)
 	{
 		buffer[i] = c;
-		i++
+		i++;
 	}
 	return (1);
 }
